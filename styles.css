@@ -1,0 +1,157 @@
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+}
+
+
+html, body {
+    height: 100%;
+    background-color: rgb(7, 7, 7) ;
+    color: #ebdac0;
+}
+
+/* Wrapper for sticky footer */
+.content {
+    min-height: calc(100vh - 60px); /* Adjust 60px to your footer height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ebdac0;
+    font-size: 1.875em;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f4f4f4;
+}
+
+/* Welcome section */
+.welcome {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Media section */
+.media {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.home-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+/* Description section */
+.description {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 2em;
+    padding: 0 20px;
+}
+
+/* Footer section */
+footer {
+    background-color: black;
+    color: #ebdac0;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0; /* Position relative to its container */
+}
+
+.email {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.email:hover {
+    color: #f4f4f4;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .navbar a {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 1.25em;
+    }
+
+    .home-logo {
+        max-height: 250px;
+    }
+
+    .description {
+        font-size: 1em;
+        padding: 0 20px; /* Increase padding for better readability */
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        position: relative; /* Change to relative positioning */
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar a {
+        font-size: 1em;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .description {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+}
