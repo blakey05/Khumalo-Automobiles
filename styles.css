@@ -1,4 +1,3 @@
-
 /* General styles */
 * {
     margin: 0;
@@ -10,11 +9,11 @@
     font-style: bold;
 }
 
-
 html, body {
     height: 100%;
-    background-color: rgb(7, 7, 7) ;
+    background-color: rgb(7, 7, 7);
     color: #ebdac0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Wrapper for sticky footer */
@@ -36,7 +35,7 @@ html, body {
 }
 
 .logo {
-    height: 80px;
+    height: 50px;
 }
 
 .navbar a {
@@ -112,13 +111,12 @@ footer {
 
 @media screen and (max-width: 768px) {
     .navbar {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .navbar a {
-        margin: 10px 0;
+
         font-size: 1.25em;
     }
 
