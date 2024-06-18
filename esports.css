@@ -1,15 +1,21 @@
 /* General styles */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: bold;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+html, body {
+    height: 100%;
     background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
     background-image: url(./resources/kart_2024-01-28_18-50-34-1.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,23 +23,43 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+/* Header styles */
+.header {
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
+.logo {
+    height: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ebdac0;
+    font-size: 1.875em;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f4f4f4;
+}
+
+/* Media section */
 .media {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em 0;
     text-align: center;
+    padding: 2em 0;
+    flex-grow: 1;
 }
 
 .logo-container {
@@ -50,27 +76,16 @@ header {
 .logo-text {
     font-size: 2em;
     color: #ebdac0;
-    margin: 0;
 }
 
 .media-description {
     font-size: 1.2em;
     color: #ebdac0;
     margin-top: 1em;
-    max-width: 600px; /* Limiting the width */
-    text-align: center; /* Center the text */
+    max-width: 600px;
 }
 
-.heading {
-    text-align: center;
-    margin: 1em 0;
-    color: #ebdac0;
-    background-color: black;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* Social icons section */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -82,23 +97,22 @@ header {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: white; /* Change color as needed */
+    color: rgb(230, 13, 230);
     margin: 0 20px;
 }
 
 .social-icons ion-icon {
-    font-size: 32px; /* Adjust size as needed */
-    margin-bottom: 10px; /* Adjust spacing between icon and text */
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-
+/* Footer section */
 footer {
+    background-color: black;
+    color: #ebdac0;
     text-align: center;
     padding: 1em 0;
-    background-color: black;
-    color:  #ebdac0;
     width: 100%;
-    margin-top: auto; /* Push the footer to the bottom */
 }
 
 .email {
@@ -106,9 +120,16 @@ footer {
     color: white;
 }
 
-/* Media Queries */
-
+/* Responsive styles */
 @media screen and (max-width: 1024px) {
+    .navbar a {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
     .home-logo {
         height: 250px;
     }
@@ -119,6 +140,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 1.25em;
+    }
+
     .home-logo {
         height: 200px;
     }
@@ -130,9 +160,22 @@ footer {
     .media-description {
         max-width: 90%;
     }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .navbar a {
+        font-size: 1em;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
     .home-logo {
         height: 150px;
     }
